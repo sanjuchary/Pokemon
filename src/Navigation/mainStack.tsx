@@ -20,7 +20,7 @@ const MainStack = () => {
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route element={<Layout />}>
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/" element={<Dashboard />} />
           <Route element={<ProtectedRoute />}>
             <Route path="/by-id" element={<ById />} />
             <Route path="/profile" element={<Profile />} />

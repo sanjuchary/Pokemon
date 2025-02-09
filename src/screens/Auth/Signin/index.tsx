@@ -29,7 +29,7 @@ const Signin = () => {
 
   useEffect(() => {
     if (localStorage.getItem("isAuthenticated") === "true") {
-      navigate("/dashboard");
+      navigate("/");
     }
   }, [navigate]);
 
@@ -57,7 +57,7 @@ const Signin = () => {
       // setIsAuthenticated(true);
       localStorage.setItem("isAuthenticated", "true");
       localStorage.setItem("accessToken", data.accessToken);
-      navigate("/dashboard");
+      navigate("/");
     },
     onError: (error: AxiosError) => {
       console.log("SignIn Failed", error.response?.data || error.message);
